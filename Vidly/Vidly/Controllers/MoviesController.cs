@@ -23,5 +23,11 @@ namespace Vidly.Controllers
             //return new EmptyResult();
             return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
         }
+
+        //Movies/Edit/id
+        public ActionResult Edit(int id)
+        {
+            return Content("ID" + id);
+        }
     }
 }
