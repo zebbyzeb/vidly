@@ -23,5 +23,10 @@ namespace Vidly.Controllers
             //return new EmptyResult();
             return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
         }
+
+        public ActionResult ByReleasedDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
     }
 }
