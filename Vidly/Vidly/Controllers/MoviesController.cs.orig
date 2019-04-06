@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Vidly.Models;
+
+namespace Vidly.Controllers
+{
+    public class MoviesController : Controller
+    {
+        // GET: Movies/Random
+        public ActionResult Random()
+        {
+            var movie = new Movie()
+            {
+                Id = 1,
+                Name = "Godfather"
+            };
+            //return View(movie);
+            //return Content("Hello World");
+            //return HttpNotFound();
+            //return new EmptyResult();
+            return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
+        }
+
+<<<<<<< HEAD
+        public ActionResult ByReleasedDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+=======
+        //Movies/Edit/id
+        public ActionResult Edit(int id)
+        {
+            return Content("ID" + id);
+>>>>>>> d309ed125a819d61491dda3e3e53d4816698be8a
+        }
+    }
+}
