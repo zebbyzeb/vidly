@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -12,18 +13,37 @@ namespace Vidly.Controllers
         // GET: Movies/Random
         public ActionResult Random()
         {
-            var movie = new Movie()
+            var viewModel = new RandomMovieViewModel()
             {
-                Id = 1,
-                Name = "Godfather"
+                Movie = new Movie()
+                {
+                    Id = 1,
+                    Name = "The Highwaymen"
+                },
+                Customers = new List<Customer>()
+                {
+                    new Customer()
+                    {
+                        Id = 1,
+                        Name = "Zebby"
+                    },
+                    new Customer()
+                    {
+                        Id = 2,
+                        Name = "Kannu"
+                    }
+                }
             };
-            //return View(movie);
+
+            return View(viewModel);
             //return Content("Hello World");
             //return HttpNotFound();
             //return new EmptyResult();
-            return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
+            //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
         }
 
+        [Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1,12)}")]
+        //how to add the defaults values for year and month usng attribute routing?
         public ActionResult ByReleasedDate(int year, int month)
         {
             return Content(year + "/" + month);
