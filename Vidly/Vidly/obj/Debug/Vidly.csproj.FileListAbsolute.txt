@@ -150,3 +150,11 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.dll
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.pdb
+D:\Vidly\Vidly\Vidly\bin\EntityFramework.dll
+D:\Vidly\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
+D:\Vidly\Vidly\Vidly\bin\EntityFramework.xml
+D:\Vidly\Vidly\Vidly\bin\EntityFramework.SqlServer.xml
+D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.xml
