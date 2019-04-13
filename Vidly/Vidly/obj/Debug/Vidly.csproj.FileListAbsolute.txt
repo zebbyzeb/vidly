@@ -171,3 +171,4 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomerModel.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMembershipTypeModel.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypesTable.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerModel.resources
