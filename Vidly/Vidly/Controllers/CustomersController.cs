@@ -24,14 +24,22 @@ namespace Vidly.Controllers
 
         public ActionResult View(int Id)
         {
-            var customers = new List<Customer>()
+            var customer = GetCustomers()
+                .Where(c => c.Id == Id)
+                .FirstOrDefault();
+
+            return View(customer);
+        }
+
+        private IEnumerable<Customer> GetCustomers()
+        {
+            var customers = new List<Customer>
             {
-                new Customer(){ Id = 1, Name = "John Smith"},
-                new Customer(){ Id = 2, Name = "Mary Williams"}
+                new Customer{ Id = 1, Name = "John Smith"},
+                new Customer{ Id = 2, Name = "Mary Williams"}
+
             };
-            var query = customers.Where(c => c.Id == Id)
-                .First();
-            return Content(query.Name);
+            return customers;
         }
     }
 }
