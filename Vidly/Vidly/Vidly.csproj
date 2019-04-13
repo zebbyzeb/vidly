@@ -134,8 +134,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904130730085_InitialModel.cs" />
+    <Compile Include="Migrations\201904130730085_InitialModel.Designer.cs">
+      <DependentUpon>201904130730085_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130810184_AddIsSubscribedToCustomerModel.cs" />
+    <Compile Include="Migrations\201904130810184_AddIsSubscribedToCustomerModel.Designer.cs">
+      <DependentUpon>201904130810184_AddIsSubscribedToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130859263_AddedMembershipTypeModel.cs" />
+    <Compile Include="Migrations\201904130859263_AddedMembershipTypeModel.Designer.cs">
+      <DependentUpon>201904130859263_AddedMembershipTypeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904131050288_PopulateMembershipTypesTable.cs" />
+    <Compile Include="Migrations\201904131050288_PopulateMembershipTypesTable.Designer.cs">
+      <DependentUpon>201904131050288_PopulateMembershipTypesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,6 +181,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904130730085_InitialModel.resx">
+      <DependentUpon>201904130730085_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130810184_AddIsSubscribedToCustomerModel.resx">
+      <DependentUpon>201904130810184_AddIsSubscribedToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130859263_AddedMembershipTypeModel.resx">
+      <DependentUpon>201904130859263_AddedMembershipTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131050288_PopulateMembershipTypesTable.resx">
+      <DependentUpon>201904131050288_PopulateMembershipTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

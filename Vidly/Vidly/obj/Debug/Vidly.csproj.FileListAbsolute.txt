@@ -158,3 +158,16 @@ D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.dll
 D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.xml
 D:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Vidly\Vidly\Vidly\bin\EntityFramework.dll
+E:\Vidly\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
+E:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Vidly\Vidly\Vidly\bin\EntityFramework.xml
+E:\Vidly\Vidly\Vidly\bin\EntityFramework.SqlServer.xml
+E:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Vidly\Vidly\Vidly\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomerModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMembershipTypeModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypesTable.resources
