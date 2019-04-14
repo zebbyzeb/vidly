@@ -172,3 +172,5 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomerModel.r
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMembershipTypeModel.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypesTable.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedNameToMembershipTypeModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateNameColumnInMembershipTypesTable.resources
