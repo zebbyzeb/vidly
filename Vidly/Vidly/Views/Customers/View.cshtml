@@ -5,4 +5,9 @@
 }
 
 <h2>@Model.Name</h2>
+<h4>@Model.MembershipType.Name</h4>
+@if (!string.IsNullOrWhiteSpace(Model.Birthdate))
+{
+    <h6>Birthdate: @Model.Birthdate</h6>
+}
 

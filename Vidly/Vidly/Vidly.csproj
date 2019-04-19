@@ -162,6 +162,14 @@
     <Compile Include="Migrations\201904140812522_PopulateNameColumnInMembershipTypesTable.Designer.cs">
       <DependentUpon>201904140812522_PopulateNameColumnInMembershipTypesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904191059400_AddedBirthdatePropertyToCustomerModel.cs" />
+    <Compile Include="Migrations\201904191059400_AddedBirthdatePropertyToCustomerModel.Designer.cs">
+      <DependentUpon>201904191059400_AddedBirthdatePropertyToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904191101177_PopulateBirthdateColumnInCustomersTable.cs" />
+    <Compile Include="Migrations\201904191101177_PopulateBirthdateColumnInCustomersTable.Designer.cs">
+      <DependentUpon>201904191101177_PopulateBirthdateColumnInCustomersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -216,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904140812522_PopulateNameColumnInMembershipTypesTable.resx">
       <DependentUpon>201904140812522_PopulateNameColumnInMembershipTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904191059400_AddedBirthdatePropertyToCustomerModel.resx">
+      <DependentUpon>201904191059400_AddedBirthdatePropertyToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904191101177_PopulateBirthdateColumnInCustomersTable.resx">
+      <DependentUpon>201904191101177_PopulateBirthdateColumnInCustomersTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

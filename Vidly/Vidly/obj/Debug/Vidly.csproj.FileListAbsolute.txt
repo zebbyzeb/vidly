@@ -174,3 +174,5 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypesTable.res
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerModel.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedNameToMembershipTypeModel.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateNameColumnInMembershipTypesTable.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdatePropertyToCustomerModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateBirthdateColumnInCustomersTable.resources
