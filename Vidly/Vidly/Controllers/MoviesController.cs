@@ -16,6 +16,12 @@ namespace Vidly.Controllers
         {
             _context = new MyDBContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Movies/Random
         public ActionResult Random()
         {
