@@ -67,6 +67,11 @@ namespace Vidly.Controllers
             return View();
         }
 
+        public ActionResult Create()
+        {
+            return Content("wip");
+        }
+
         //private IEnumerable<Customer> GetCustomers()
         //{
         //    var customers = new List<Customer>
