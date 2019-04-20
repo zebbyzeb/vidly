@@ -5,11 +5,17 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private MyDBContext _context;
+        public MoviesController()
+        {
+            _context = new MyDBContext();
+        }
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -47,6 +53,15 @@ namespace Vidly.Controllers
         public ActionResult ByReleasedDate(int year, int month)
         {
             return Content(year + "/" + month);
+        }
+
+        public ActionResult Index()
+        {
+            var movies = _context.Movies
+                .Include(m => m.Genre)
+                .ToList();
+
+            return View(movies);
         }
     }
 }

@@ -170,8 +170,25 @@
     <Compile Include="Migrations\201904191101177_PopulateBirthdateColumnInCustomersTable.Designer.cs">
       <DependentUpon>201904191101177_PopulateBirthdateColumnInCustomersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904200428197_AddedPropertiesToMovieAddedGenreModel.cs" />
+    <Compile Include="Migrations\201904200428197_AddedPropertiesToMovieAddedGenreModel.Designer.cs">
+      <DependentUpon>201904200428197_AddedPropertiesToMovieAddedGenreModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904200435112_AddedPropertiesToMovieAddedGenreModel1.cs" />
+    <Compile Include="Migrations\201904200435112_AddedPropertiesToMovieAddedGenreModel1.Designer.cs">
+      <DependentUpon>201904200435112_AddedPropertiesToMovieAddedGenreModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904200439230_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\201904200439230_PopulateGenresTable.Designer.cs">
+      <DependentUpon>201904200439230_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904200453142_PopulateMoviesTable.cs" />
+    <Compile Include="Migrations\201904200453142_PopulateMoviesTable.Designer.cs">
+      <DependentUpon>201904200453142_PopulateMoviesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -193,6 +210,7 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\View.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,6 +248,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904191101177_PopulateBirthdateColumnInCustomersTable.resx">
       <DependentUpon>201904191101177_PopulateBirthdateColumnInCustomersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904200428197_AddedPropertiesToMovieAddedGenreModel.resx">
+      <DependentUpon>201904200428197_AddedPropertiesToMovieAddedGenreModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904200435112_AddedPropertiesToMovieAddedGenreModel1.resx">
+      <DependentUpon>201904200435112_AddedPropertiesToMovieAddedGenreModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904200439230_PopulateGenresTable.resx">
+      <DependentUpon>201904200439230_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904200453142_PopulateMoviesTable.resx">
+      <DependentUpon>201904200453142_PopulateMoviesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

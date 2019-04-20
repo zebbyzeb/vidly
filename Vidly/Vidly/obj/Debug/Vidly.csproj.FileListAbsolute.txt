@@ -176,3 +176,7 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedNameToMembershipTypeModel.r
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateNameColumnInMembershipTypesTable.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdatePropertyToCustomerModel.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateBirthdateColumnInCustomersTable.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedPropertiesToMovieAddedGenreModel.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedPropertiesToMovieAddedGenreModel1.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenresTable.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMoviesTable.resources
