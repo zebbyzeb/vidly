@@ -63,5 +63,16 @@ namespace Vidly.Controllers
 
             return View(movies);
         }
+
+        public ActionResult View(int Id)
+        {
+            var movie = _context.Movies
+                .Where(m => m.Id == Id)
+                .ToList()
+                .FirstOrDefault();
+            if (movie == null)
+                return HttpNotFound();
+            return View(movie);
+        }
     }
 }

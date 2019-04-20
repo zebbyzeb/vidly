@@ -23,6 +23,12 @@ namespace Vidly
             //     );
 
             routes.MapRoute(
+                name: "MovieDetails",
+                url: "movies/{id}",
+                defaults: new { controller = "Movies", action = "View" }
+                );
+
+            routes.MapRoute(
                 name: "CustomerDetails",
                 url: "customers/{id}",
                 defaults: new { controller = "Customers", action = "View" }
