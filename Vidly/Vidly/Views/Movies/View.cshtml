@@ -7,3 +7,4 @@
 <h2>@Model.Name</h2>
 <h3>Release Date: @Model.ReleaseDate</h3>
 <h3>Stock Avalaible: @Model.AvailableStock</h3>
+@Html.ActionLink("Edit", "Edit", "Movies", new { Id = Model.Id}, new { @class = "btn btn-primary", @role = "button" })
