@@ -74,9 +74,11 @@ namespace Vidly.Controllers
             return View(newCustomer);
         }
 
-        public ActionResult Create()
+        [ActionName("New")]
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel viewModel)
         {
-            return Content("wip");
+            return View();
         }
 
         //private IEnumerable<Customer> GetCustomers()
