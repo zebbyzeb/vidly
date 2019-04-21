@@ -214,6 +214,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\View.cshtml" />
     <Content Include="Views\Customers\New.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

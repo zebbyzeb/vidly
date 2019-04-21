@@ -10,4 +10,4 @@
 {
     <h6>Birthdate: @Model.Birthdate</h6>
 }
-
+@Html.ActionLink("Edit", "Edit", "Customers", new { Id = Model.Id }, new { @class = "btn btn-primary", @role = "button" })

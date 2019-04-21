@@ -76,11 +76,38 @@ namespace Vidly.Controllers
 
         [ActionName("New")]
         [HttpPost]
-        public ActionResult Create(NewCustomerViewModel viewModel)
+        public ActionResult Save(NewCustomerViewModel viewModel)
         {
-            _context.Customers.Add(viewModel.Customer);
+            //If the customer is a new customer
+            if (viewModel.Customer.Id == 0)
+                _context.Customers.Add(viewModel.Customer);            
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == viewModel.Customer.Id);
+
+                //Mapper.Map(viewModel.Customer, customerInDb);
+                customerInDb.Name = viewModel.Customer.Name;
+                customerInDb.Birthdate = viewModel.Customer.Birthdate;
+                customerInDb.MembershipTypeId = viewModel.Customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsLetter = viewModel.Customer.IsSubscribedToNewsLetter;
+            }
             _context.SaveChanges();
+
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int Id)
+        {
+            var customer = _context.Customers
+                .Where(c => c.Id == Id)
+                .ToList()
+                .FirstOrDefault();
+            var viewModel = new NewCustomerViewModel()
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+            return View("New",viewModel);
         }
 
         //private IEnumerable<Customer> GetCustomers()
