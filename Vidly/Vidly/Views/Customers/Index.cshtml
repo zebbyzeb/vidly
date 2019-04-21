@@ -5,13 +5,14 @@
 }
 
 <h2>Customers</h2>
-@foreach(var customer in Model)
+@Html.ActionLink("Create Customer", "New", "Customers", null, new { @class = "btn btn-primary", @role = "button" })
+@foreach (var customer in Model)
 {
-<ul>
-    <li>@customer.MembershipType.DiscountRate%</li>
-    @Html.ActionLink(customer.Name, "View","Customers",new { id = customer.Id },null)
+    <ul>
+        <li>@customer.MembershipType.DiscountRate%</li>
+        @Html.ActionLink(customer.Name, "View", "Customers", new { id = customer.Id }, null)
 
-    @*<li>@customer.Name</li>*@
-</ul>
+        @*<li>@customer.Name</li>*@
+    </ul>
 }
 
