@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201904200453142_PopulateMoviesTable.Designer.cs">
       <DependentUpon>201904200453142_PopulateMoviesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904260449309_MakeMembershipTypeIdNullableIntInCustomerModel.cs" />
+    <Compile Include="Migrations\201904260449309_MakeMembershipTypeIdNullableIntInCustomerModel.Designer.cs">
+      <DependentUpon>201904260449309_MakeMembershipTypeIdNullableIntInCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -268,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904200453142_PopulateMoviesTable.resx">
       <DependentUpon>201904200453142_PopulateMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904260449309_MakeMembershipTypeIdNullableIntInCustomerModel.resx">
+      <DependentUpon>201904260449309_MakeMembershipTypeIdNullableIntInCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

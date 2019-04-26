@@ -9,8 +9,11 @@
 @foreach (var customer in Model)
 {
     <ul>
-        <li>@customer.MembershipType.DiscountRate%</li>
-        @Html.ActionLink(customer.Name, "View", "Customers", new { id = customer.Id }, null)
+        @if (customer.MembershipType != null)
+        {
+            <li>@customer.MembershipType.DiscountRate%</li>
+        }
+        <li>@Html.ActionLink(customer.Name, "View", "Customers", new { id = customer.Id }, null)</li>
 
         @*<li>@customer.Name</li>*@
     </ul>

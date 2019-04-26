@@ -183,3 +183,4 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMoviesTable.resources
 E:\Vidly\Vidly\Vidly\bin\AutoMapper.dll
 E:\Vidly\Vidly\Vidly\bin\AutoMapper.pdb
 E:\Vidly\Vidly\Vidly\bin\AutoMapper.xml
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.MakeMembershipTypeIdNullableIntInCustomerModel.resources
