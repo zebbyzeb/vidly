@@ -1,0 +1,2 @@
+﻿DBCC CHECKIDENT ('Customers', RESEED, 0);
+GO

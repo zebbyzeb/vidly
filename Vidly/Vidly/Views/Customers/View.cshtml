@@ -5,9 +5,11 @@
 }
 
 <h2>@Model.Name</h2>
-<h4>@Model.MembershipType.Name</h4>
-@if (!string.IsNullOrWhiteSpace(Model.Birthdate))
-{
+@if (Model.MembershipTypeId != null) { 
+    <h4>@Model.MembershipType.Name</h4>
+    }
+@if (Model.Birthdate != null) { 
     <h6>Birthdate: @Model.Birthdate</h6>
-}
+    }
+
 @Html.ActionLink("Edit", "Edit", "Customers", new { Id = Model.Id }, new { @class = "btn btn-primary", @role = "button" })
