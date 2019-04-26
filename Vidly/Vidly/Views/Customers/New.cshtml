@@ -19,6 +19,7 @@
             Date of Birth
             @Html.TextBoxFor(c => c.Birthdate, new { @class = "form-control" })
         </label>
+        @Html.ValidationMessageFor(c => c.Birthdate)
     </div>
     <div class="checkbox">
         <label>

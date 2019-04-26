@@ -14,6 +14,7 @@ namespace Vidly.ViewModels
         public int Id { get; set; }
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
+        [Min18YearsIfMember]
         public DateTime? Birthdate { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }
         public int? MembershipTypeId { get; set; }
