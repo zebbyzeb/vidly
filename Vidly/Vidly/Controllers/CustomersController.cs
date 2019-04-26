@@ -68,7 +68,7 @@ namespace Vidly.Controllers
                 .ToList();
             var newCustomer = new NewCustomerViewModel()
             {
-                Customer = new Customer(),
+                //Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
             return View(newCustomer);
@@ -78,18 +78,37 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(NewCustomerViewModel viewModel)
         {
+            //validate the customer model
+            if (!ModelState.IsValid)
+            {
+                var membershipTypes = _context.MembershipTypes
+                    .ToList();
+                viewModel.MembershipTypes = membershipTypes;
+                return View("New", viewModel);
+            }
+
             //If the customer is a new customer
-            if (viewModel.Customer.Id == 0)
-                _context.Customers.Add(viewModel.Customer);            
+            //if (viewModel.Customer.Id == 0)
+            if (viewModel.Id == 0)
+            {
+                var customer = new Customer()
+                {
+                    Name = viewModel.Name,
+                    Birthdate = viewModel.Birthdate,
+                    IsSubscribedToNewsLetter = viewModel.IsSubscribedToNewsLetter,
+                    MembershipTypeId = viewModel.MembershipTypeId
+                };
+                _context.Customers.Add(customer);
+            }
             else
             {
-                var customerInDb = _context.Customers.Single(c => c.Id == viewModel.Customer.Id);
+                var customerInDb = _context.Customers.Single(c => c.Id == viewModel.Id);
 
-                //Mapper.Map(viewModel.Customer, customerInDb);
-                customerInDb.Name = viewModel.Customer.Name;
-                customerInDb.Birthdate = viewModel.Customer.Birthdate;
-                customerInDb.MembershipTypeId = viewModel.Customer.MembershipTypeId;
-                customerInDb.IsSubscribedToNewsLetter = viewModel.Customer.IsSubscribedToNewsLetter;
+                //    //Mapper.Map(viewModel.Customer, customerInDb);
+                customerInDb.Name = viewModel.Name;
+                customerInDb.Birthdate = viewModel.Birthdate;
+                customerInDb.MembershipTypeId = viewModel.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsLetter = viewModel.IsSubscribedToNewsLetter;
             }
             _context.SaveChanges();
 
@@ -102,9 +121,14 @@ namespace Vidly.Controllers
                 .Where(c => c.Id == Id)
                 .ToList()
                 .FirstOrDefault();
+            
             var viewModel = new NewCustomerViewModel()
             {
-                Customer = customer,
+                Id = customer.Id,
+                Name = customer.Name,
+                Birthdate = customer.Birthdate,
+                IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter,
+                MembershipTypeId = customer.MembershipTypeId,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
             return View("New",viewModel);
