@@ -174,3 +174,5 @@ E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.Initial.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.DateTimeNullableInCustomers.resources
 E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenresTable.resources
+E:\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.GenreIdNullableInMovieModel.resources

@@ -74,7 +74,7 @@ namespace Vidly.Controllers
         {
             var viewModel = new NewMovieViewModel()
             {
-                Movie = new Movie(),
+                //Movie = new Movie(),
                 Genres = _context.Genres.ToList()
             };
             return View(viewModel);
@@ -84,14 +84,19 @@ namespace Vidly.Controllers
         [ActionName("New")]
         public ActionResult Save(NewMovieViewModel viewModel)
         {
-            if (viewModel.Movie.Id == 0)
-                _context.Movies.Add(viewModel.Movie);
+            if (viewModel.Id == 0) {
+                var movie = new Movie();
+                movie.Name = viewModel.Name;
+                movie.GenreId = viewModel.GenreId;
+
+                _context.Movies.Add(movie);
+            }
             else
             {
-                var movieInDb = _context.Movies.Single(m => m.Id == viewModel.Movie.Id);
+                var movieInDb = _context.Movies.Single(m => m.Id == viewModel.Id);
 
-                movieInDb.Name = viewModel.Movie.Name;
-                movieInDb.GenreId = viewModel.Movie.GenreId;
+                movieInDb.Name = viewModel.Name;
+                movieInDb.GenreId = viewModel.GenreId;
             }
             _context.SaveChanges();
             return RedirectToAction("Index");
@@ -114,7 +119,8 @@ namespace Vidly.Controllers
                 .Single(m => m.Id == Id);
             var viewModel = new NewMovieViewModel()
             {
-                Movie = movie,
+                //Movie = movie,
+                Name = movie.Name,
                 Genres = _context.Genres.ToList()
             };
             return View("New", viewModel);
