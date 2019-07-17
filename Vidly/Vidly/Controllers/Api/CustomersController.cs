@@ -20,6 +20,7 @@ namespace Vidly.Controllers.Api
         }
 
         //GET /api/customers
+        [Route("api/customers")]
         public IEnumerable<CustomerDTO> GetCustomers()
         {
             return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDTO>);
@@ -45,7 +46,14 @@ namespace Vidly.Controllers.Api
             {
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
             }
-            var customer = Mapper.Map<CustomerDTO, Customer>(customerDto);
+            //var customer = Mapper.Map<CustomerDTO, Customer>(customerDto);
+            var customer = new Customer
+            {
+                Birthdate = customerDto.Birthdate,
+                IsSubscribedToNewsLetter = customerDto.IsSubscribedToNewsLetter,
+                MembershipTypeId = customerDto.MembershipTypeId,
+                Name = customerDto.Name
+            };
             _context.Customers.Add(customer);
             _context.SaveChanges();
 
