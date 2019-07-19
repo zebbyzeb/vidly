@@ -25,18 +25,25 @@ namespace Vidly.Controllers.Api
 
         public IHttpActionResult GetMovie(int id)
         {
-            var movie = _context.Movies.Where(m => m.Id == id).SingleOrDefault();
-            var movieDto = new MovieDTO
+            try
             {
-                Id = movie.Id,
-                Name = movie.Name,
-                AvailableStock = movie.AvailableStock,
-                DateAdded = movie.DateAdded,
-                ReleaseDate = movie.ReleaseDate,
-                GenreId = movie.GenreId
-            };
+                var movie = _context.Movies.Where(m => m.Id == id).SingleOrDefault();
+                var movieDto = new MovieDTO
+                {
+                    Id = movie.Id,
+                    Name = movie.Name,
+                    AvailableStock = movie.AvailableStock,
+                    DateAdded = movie.DateAdded,
+                    ReleaseDate = movie.ReleaseDate,
+                    GenreId = movie.GenreId
+                };
 
-            return Ok<MovieDTO>(movieDto);
+                return Ok<MovieDTO>(movieDto);
+            }
+            catch
+            {
+                return BadRequest();
+            }            
         }
 
         public IHttpActionResult CreateMovie(MovieDTO movieDto)
@@ -55,6 +62,29 @@ namespace Vidly.Controllers.Api
             movieDto.Id = movie.Id;
 
             return Ok<MovieDTO>(movieDto);
+        }
+
+        [HttpPut]
+        public IHttpActionResult UpdateMovie(MovieDTO movieDTO)
+        {
+            var movie = _context.Movies.Where(m => m.Id == movieDTO.Id).SingleOrDefault();
+
+            movie.Name = movieDTO.Name;
+            movie.ReleaseDate = movieDTO.ReleaseDate;
+            movie.AvailableStock = movieDTO.AvailableStock;
+            movie.DateAdded = movieDTO.DateAdded;
+            movie.GenreId = movieDTO.GenreId;
+
+            _context.SaveChanges();
+
+            return Ok<MovieDTO>(movieDTO);
+        }
+
+        public IHttpActionResult DeleteMovie(int id)
+        {
+            var movie = _context.Movies.Remove(_context.Movies.Where(m => m.Id == id).SingleOrDefault());
+            _context.SaveChanges();
+            return Ok();
         }
     }
 }
