@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.Owin;
 using Owin;
-using 
+using IdentityServer3.Core.Configuration;
+using IdentityServer3.Core.Services.InMemory;
+using Microsoft.Owin.Hosting;
 
-[assembly: OwinStartup(typeof(OAuthServer.Startup))]
+//[assembly: OwinStartup(typeof(OAuthServer.Startup))]
 
 namespace OAuthServer
 {
@@ -12,9 +15,18 @@ namespace OAuthServer
     {
         public void Configuration(IAppBuilder app)
         {
-            //var options = new 
             // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=316888
-            app.Use.
+            var options = new IdentityServerOptions
+            {
+                Factory = new IdentityServerServiceFactory()
+                            .UseInMemoryClients(Clients.Get())
+                            .UseInMemoryScopes(Scopes.Get())
+                            .UseInMemoryUsers(new List<InMemoryUser>()),
+
+                RequireSsl = false
+            };
+
+            app.UseIdentityServer(options);
         }
     }
 }

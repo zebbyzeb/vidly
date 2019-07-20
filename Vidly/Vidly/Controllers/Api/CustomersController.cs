@@ -21,6 +21,7 @@ namespace Vidly.Controllers.Api
 
         //GET /api/customers
         [Route("api/customers")]
+        //[AllowAnonymous]
         public IEnumerable<CustomerDTO> GetCustomers()
         {
             return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDTO>);

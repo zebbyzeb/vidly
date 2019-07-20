@@ -20,7 +20,7 @@ namespace Vidly
                 cfg.AddProfile<MappingProfile>();
             });
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            //GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
